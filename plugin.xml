@@ -16,7 +16,7 @@
     </engines>
 
     <js-module src="www/UnknownSources.js">
-        <clobbers target="cordova.getAppVersion"/>
+        <clobbers target="cordova.UnknownSources"/>
     </js-module>
 
     <!-- android -->
