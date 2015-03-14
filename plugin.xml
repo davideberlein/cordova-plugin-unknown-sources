@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="de.eits.cordova.unknownsources"
-        version="0.1.0">
+        version="0.1.1">
 
     <name>UnknownSources</name>
     <description>
@@ -16,14 +16,14 @@
     </engines>
 
     <js-module src="www/UnknownSources.js">
-        <clobbers target="cordova.UnknownSources"/>
+        <clobbers target="cordova.plugins.UnknownSources"/>
     </js-module>
 
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="UnknownSources">
-                <param name="android-package" value="de.eits.cordova.unknownsources"/>
+                <param name="android-package" value="de.eits.cordova.unknownsources.UnknownSources"/>
             </feature>
         </config-file>
         <source-file src="src/android/UnknownSources.java" target-dir="src/de/eits/cordova/unknownsources"/>
@@ -31,15 +31,13 @@
 
     <!-- ios -->
     <platform name="ios">
-        <plugins-plist key="AppVersion" string="AppVersion"/>
-
         <config-file target="config.xml" parent="/*">
-            <feature name="AppVersion">
-                <param name="ios-package" value="AppVersion"/>
+            <feature name="UnknownSources">
+                <param name="ios-package" value="EITSUnknownSources"/>
             </feature>
         </config-file>
 
-        <header-file src="src/ios/AppVersion.h"/>
-        <source-file src="src/ios/AppVersion.m"/>
+        <header-file src="src/ios/UnknownSources.h"/>
+        <source-file src="src/ios/UnknownSources.m"/>
     </platform>
 </plugin>
