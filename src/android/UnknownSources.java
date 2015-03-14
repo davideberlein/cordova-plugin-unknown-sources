@@ -1,18 +1,31 @@
 package de.eits.cordova.unknownsources;
 
+import org.apache.cordova.CordovaArgs;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
+import android.util.Log;
 import android.content.Intent;
 import android.provider.Settings.SettingNotFoundException;
 
 public class UnknownSources extends CordovaPlugin {
+
+	private static final String LOG_TAG = "UnknownSourcesPlugin";
+
 	@Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+	public void pluginInitialize() {
+        Log.i(LOG_TAG, "Plugin initialized.");
+    }
+
+	@Override
+    public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) throws JSONException {
+
+        Log.i(LOG_TAG, "execute called with action: " + action);
+
         if (action.equals("isUnknownSourcesActivated")) {
             JSONObject r = new JSONObject();
             r.put("activated", isUnknownSourcesActivated());
