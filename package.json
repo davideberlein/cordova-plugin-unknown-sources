@@ -13,6 +13,6 @@
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "author": "",
+  "author": "David Eberlein",
   "license": "Apache 2.0"
 }
