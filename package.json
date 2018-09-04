@@ -1,5 +1,5 @@
 {
-  "name": "UnknownSources",
+  "name": "de.eits.cordova.unknownsources",
   "version": "0.1.1",
   "description": "Cordova Plugins that allows to check if unknown sources are activated in Android and go to the corresponding settings page",
   "cordova": {
